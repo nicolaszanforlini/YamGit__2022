@@ -38,4 +38,25 @@ class Yam
         }
         return $this->generateTabDes;
     }
+
+    // retourne le tableau d'occurences des dés lancés
+    public function occurenceTab() : array {
+        $i=0;
+        foreach( $this->generateTabDes as $sequence ) {
+            $res = ["1"=>0,"2"=>0,"3"=>0,"4"=>0,"5"=>0,"6"=>0];
+            foreach($this->tabFaceDe as $elem) {
+                $cpt = 0;
+                foreach( $sequence as $nbseq ) {
+                    if ($nbseq == $elem) {
+                        $cpt++;
+                        $res["$elem"] = $cpt;
+                    }
+                }
+            }
+            $this->tabOccurenceDes[$i] = $res;
+            $i++;
+        }
+        return $this->tabOccurenceDes;
+    }
+
 }
