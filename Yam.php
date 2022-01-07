@@ -15,19 +15,12 @@ namespace App;
  */
 class Yam
 {
-    private array $tabFaceDe = [1,2,3,4,5,6];
-    private array $generateTabDes;
-    private array $tabOccurenceDes;
-    private array $resultFinal = ["brelan" => 0, "carre" => 0, "yam" => 0];
+    private array $tabFaceDe = [1,2,3,4,5,6];  // faces du dé
+    private array $generateTabDes;             // tableau des lancés de dés
+    private array $tabOccurenceDes;            // tableau des occurences du tableau des lancés de dés
+    private array $resultFinal = ["brelan" => 0, "carre" => 0, "yam" => 0]; // résultat final
 
-    /**
-     * 
-     *## Method to generate an array of dices
-     * 
-     * @param int $number
-     *
-     * @return tabOccurenceDes
-     */
+    // génère un tableau de dés lancés
     public function generateDes( int $nb ): array
     {
         $j = 0;
@@ -46,12 +39,7 @@ class Yam
         return $this->generateTabDes;
     }
 
-    /**
-     * 
-     *## Method to calcule occurences of array dices
-     *
-     * @return tabOccurenceDes
-     */
+    // retourne le tableau d'occurences des dés lancés
     public function occurenceTab(): array
     {
         $i=0;
@@ -76,12 +64,7 @@ class Yam
         return $this->tabOccurenceDes;
     }
     
-    /**
-     * 
-     *## Method to add result of occurences dices
-     *
-     * @return resultFinal
-     */
+    // trie des résultats
     public function tableResult(): array
     {
         foreach($this->tabOccurenceDes as $elres)
