@@ -18,7 +18,17 @@ namespace App;
  * Fichier de lancement de la simulation.
  */
 
+$yam = new Yam;
 
+echo PHP_EOL."==== partie générée ( input du nombre de lancé ) ====".PHP_EOL;
+$genGame = $yam->generateDes(10);
+print_r($genGame);
 
+echo "==== occurence de la partie générée ====".PHP_EOL;
+$occurenceGame = $yam->occurenceTab();
+print_r($occurenceGame);
 
+echo "==== résultat de la partie ====".PHP_EOL;
+$result = $yam->tableResult();
+print_r($result);
 
