@@ -21,7 +21,7 @@ class Yam
     private array $resultFinal = ["brelan" => 0, "carre" => 0, "yam" => 0]; // résultat final
 
     // génère un tableau de dés lancés
-    public function generateDes( int $nb ) : array
+    public function generateDes( int $nb ): array
     {
         $j = 0;
         while($j<$nb)
@@ -40,14 +40,19 @@ class Yam
     }
 
     // retourne le tableau d'occurences des dés lancés
-    public function occurenceTab() : array {
+    public function occurenceTab(): array
+    {
         $i=0;
-        foreach( $this->generateTabDes as $sequence ) {
+        foreach( $this->generateTabDes as $sequence )
+        {
             $res = ["1"=>0,"2"=>0,"3"=>0,"4"=>0,"5"=>0,"6"=>0];
-            foreach($this->tabFaceDe as $elem) {
+            foreach($this->tabFaceDe as $elem)
+            {
                 $cpt = 0;
-                foreach( $sequence as $nbseq ) {
-                    if ($nbseq == $elem) {
+                foreach( $sequence as $nbseq )
+                {
+                    if ($nbseq == $elem)
+                    {
                         $cpt++;
                         $res["$elem"] = $cpt;
                     }
