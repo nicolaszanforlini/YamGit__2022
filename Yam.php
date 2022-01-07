@@ -63,5 +63,29 @@ class Yam
         }
         return $this->tabOccurenceDes;
     }
+    
+    // trie des résultats
+    public function tableResult(): array
+    {
+        foreach($this->tabOccurenceDes as $elres)
+        {
+            rsort($elres);
+            switch ($elres[0])
+            {
+                case 5:
+                    $this->resultFinal["yam"] += 1;
+                    break; 
+                case 4:
+                    $this->resultFinal["carre"] += 1;
+                    break; 
+                case 3:
+                    $this->resultFinal["brelan"] += 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+        return $this->resultFinal;
+    }
 
 }
