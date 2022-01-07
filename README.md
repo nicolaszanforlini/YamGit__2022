@@ -9,5 +9,4 @@ Effacer la branche créé.
 Une fois que l’on a une 1ere version stable on tag.
 
 ## Install :
-Copier les fichiers.
-Run file app.php.
+Copie files and run file app.php.
